@@ -208,7 +208,7 @@ payment_key   VARCHAR(255)                   -- 토스 페이먼츠 키
 *   [x] 깃 & 깃허브 리포지토리 연결
 *   [x] Hello World API
 *   [x] 공통 응답 래퍼 `ApiResponse<T>`
-*   [ ] 글로벌 예외 처리 `GlobalExceptionHandler`
+*   [x] 글로벌 예외 처리 `GlobalExceptionHandler`
 *   [ ] 회원가입 / 로그인 (JWT)
 *   [ ] 콘텐츠 생성 API + Gemini 연동
 *   [ ] 구독 결제 (토스 페이먼츠)
@@ -236,3 +236,4 @@ payment_key   VARCHAR(255)                   -- 토스 페이먼츠 키
 | 2024-XX-XX | v0.0.1 | - 프로젝트 초기 세팅<br>- Docker PostgreSQL 연결<br>- 깃/깃허브 리포지토리 연동 | |
 | 2024-05-02 | v0.0.2 | - 서버 정상 작동 테스트용 Hello API 추가<br>- Spring Security 기본 설정(Hello API 허용) 추가 | |
 | 2024-05-02 | v0.0.3 | - 공통 응답 래퍼(ApiResponse) 클래스 추가 | |
+| 2024-05-02 | v0.0.4 | - 글로벌 예외 처리(GlobalExceptionHandler) 구축<br>- SecurityConfig 테스트 API 허용 | |

@@ -15,7 +15,7 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable()) // 로컬 테스트 및 API 서버를 위해 CSRF 비활성화
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/v1/hello").permitAll() // hello API는 누구나 접근 가능
+                .requestMatchers("/api/v1/hello", "/api/v1/error-test").permitAll() // 테스트용 API는 누구나 접근 가능하도록 허용
                 .anyRequest().authenticated() // 나머지는 인증 필요
             );
             
