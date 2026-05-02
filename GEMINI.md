@@ -1,5 +1,3 @@
----
-
 # PROJECT: SNS-AI-BACKEND
 
 ## 0. 개발자 정보
@@ -143,13 +141,13 @@ payment_key   VARCHAR(255)                   -- 토스 페이먼츠 키
 ## 7. 공통 응답 형식
 
 ```json
-// 성공
 { 
   "success": true, 
-  "data": { ... } 
+  "data": { "key": "value" } 
 }
+```
 
-// 실패
+```json
 { 
   "success": false, 
   "error": { 
@@ -209,7 +207,7 @@ payment_key   VARCHAR(255)                   -- 토스 페이먼츠 키
 *   [x] Hello World API
 *   [x] 공통 응답 래퍼 `ApiResponse<T>`
 *   [x] 글로벌 예외 처리 `GlobalExceptionHandler`
-*   [ ] 회원가입 / 로그인 (JWT)
+*   [x] 회원가입 / 로그인 (JWT)
 *   [ ] 콘텐츠 생성 API + Gemini 연동
 *   [ ] 구독 결제 (토스 페이먼츠)
 *   [ ] GitHub Actions CI/CD
@@ -237,3 +235,4 @@ payment_key   VARCHAR(255)                   -- 토스 페이먼츠 키
 | 2024-05-02 | v0.0.2 | - 서버 정상 작동 테스트용 Hello API 추가<br>- Spring Security 기본 설정(Hello API 허용) 추가 | |
 | 2024-05-02 | v0.0.3 | - 공통 응답 래퍼(ApiResponse) 클래스 추가 | |
 | 2024-05-02 | v0.0.4 | - 글로벌 예외 처리(GlobalExceptionHandler) 구축<br>- SecurityConfig 테스트 API 허용 | |
+| 2024-05-02 | v0.1.0 | - User Entity, Repository, DTO 추가<br>- 회원가입 및 JWT 로그인 기능 구현<br>- SecurityConfig JWT 필터 적용 | |
