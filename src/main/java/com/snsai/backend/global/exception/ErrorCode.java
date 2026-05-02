@@ -15,7 +15,13 @@ public enum ErrorCode {
     // 회원 관련 에러
     USER_NOT_FOUND(HttpStatus.NOT_FOUND, "USER_404", "사용자를 찾을 수 없습니다."),
     DUPLICATE_EMAIL(HttpStatus.CONFLICT, "USER_409", "이미 사용 중인 이메일입니다."),
-    
+    INVALID_PASSWORD(HttpStatus.UNAUTHORIZED, "USER_401", "비밀번호가 일치하지 않습니다."),
+
+    // 인증 관련 에러
+    INVALID_TOKEN(HttpStatus.UNAUTHORIZED, "AUTH_401_1", "유효하지 않은 토큰입니다."),
+    EXPIRED_TOKEN(HttpStatus.UNAUTHORIZED, "AUTH_401_2", "만료된 토큰입니다."),
+    UNAUTHORIZED_REQUEST(HttpStatus.UNAUTHORIZED, "AUTH_401_3", "인증이 필요한 요청입니다."),
+
     // 구독 및 사용량 관련 에러
     USAGE_LIMIT_EXCEEDED(HttpStatus.FORBIDDEN, "SUBSCRIPTION_403", "무료 플랜의 이번 달 사용량을 모두 소진했습니다. 프로 플랜으로 업그레이드 해주세요.");
 
