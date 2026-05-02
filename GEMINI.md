@@ -1,4 +1,3 @@
-
 ---
 
 # PROJECT: SNS-AI-BACKEND
@@ -171,6 +170,14 @@ payment_key   VARCHAR(255)                   -- 토스 페이먼츠 키
 *   **Lombok:** `@RequiredArgsConstructor`(생성자 주입), `@Getter`, `@Builder` 사용
 *   **JPA:** `ddl-auto=update` (운영 시 none), N+1 문제 주의 → `fetch join` 사용
 *   **보안:** 비밀번호 BCrypt, JWT secret 환경변수로 관리, SQL Injection 주의
+*   **Git 커밋 컨벤션:** 
+    *   `feat`: 새로운 기능 추가
+    *   `fix`: 버그 수정
+    *   `docs`: 문서 수정
+    *   `style`: 코드 포맷팅, 세미콜론 누락 등 (코드 변경 없음)
+    *   `refactor`: 코드 리팩토링
+    *   `test`: 테스트 코드 추가 및 수정
+    *   `chore`: 빌드 업무, 설정 등
 
 ---
 
@@ -198,7 +205,8 @@ payment_key   VARCHAR(255)                   -- 토스 페이먼츠 키
 *   [x] 프로젝트 초기 세팅 (Spring Boot 3.3, Gradle, Java 21)
 *   [x] Docker PostgreSQL 연결
 *   [x] application.properties DB 설정
-*   [ ] Hello World API
+*   [x] 깃 & 깃허브 리포지토리 연결
+*   [x] Hello World API
 *   [ ] 공통 응답 래퍼 `ApiResponse<T>`
 *   [ ] 글로벌 예외 처리 `GlobalExceptionHandler`
 *   [ ] 회원가입 / 로그인 (JWT)
@@ -215,4 +223,15 @@ payment_key   VARCHAR(255)                   -- 토스 페이먼츠 키
 2.  `import` 문 포함
 3.  핵심 포인트 3줄 이내 한국어 설명
 4.  보안 이슈 있으면 반드시 언급
-5.  설명은 한국어, 코드 주석은 최소화</T>
+5.  설명은 한국어, 코드 주석은 최소화
+6.  **버전 업데이트 시 Git 커밋 메시지 추천 및 `13. 버전 및 변경 이력` 업데이트 수행할 것**
+7.  **기능 추가 시 반드시 구현 방식, 사용 기술/로직, 그리고 '왜 그렇게 구현했는지(이유)'를 초보자 눈높이에서 자세히 설명할 것.**
+
+---
+
+## 13. 버전 및 변경 이력 (Changelog)
+
+| 날짜 | 버전 | 변경 사항 | 비고 |
+| :--- | :--- | :--- | :--- |
+| 2024-XX-XX | v0.0.1 | - 프로젝트 초기 세팅<br>- Docker PostgreSQL 연결<br>- 깃/깃허브 리포지토리 연동 | |
+| 2024-05-02 | v0.0.2 | - 서버 정상 작동 테스트용 Hello API 추가<br>- Spring Security 기본 설정(Hello API 허용) 추가 | |
